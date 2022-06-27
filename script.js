@@ -41,3 +41,19 @@ let whitePixel = document.querySelectorAll('.pixel');
 for (let i = 0; i < whitePixel.length; i += 1) {
   whitePixel[i].addEventListener('click', applyingColor);
 };
+
+function clearComplete() {
+  const pixels = document.querySelectorAll('.pixel');
+  console.log(pixels);
+  for (let i = 0; i < 25; i += 1) {
+    pixels[i].style.backgroundColor = '#ffffff';
+  }
+}
+
+function clearButton() {
+  const button = document.querySelector('#clear-board');
+  // console.log(button);
+  button.addEventListener('click', clearComplete);
+}
+
+clearButton();
